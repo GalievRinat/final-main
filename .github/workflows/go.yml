@@ -33,14 +33,12 @@ jobs:
         go-version: '1.20'
 
     - name: Set up SQLite       
-      run: go get modernc.org/sqlite
+      run: go mod download
 
     # Шаг с именем "Build"
-    - name: Build
-      # Этот шаг просто выполняет команду 'go build -v ./...'
-      run: go build -v ./.
+    - name: Build      
+      run: CGO_ENABLED=0 GOOS=linux GOARCH=amd64 go build -v ./.
 
     # Шаг с именем "Test"
-    - name: Test
-      # Этот шаг выполняет команду 'go test -v ./...'
+    - name: Test      
       run: go test -v ./.
