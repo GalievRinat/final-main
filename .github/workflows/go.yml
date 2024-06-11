@@ -32,6 +32,9 @@ jobs:
       with:
         go-version: '1.20'
 
+    - name: Set up SQLite       
+      run: go get modernc.org/sqlite
+
     # Шаг с именем "Build"
     - name: Build
       # Этот шаг просто выполняет команду 'go build -v ./...'
