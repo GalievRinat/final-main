@@ -58,7 +58,7 @@ jobs:
         id: meta
         uses: docker/metadata-action@v5.5.1
         with:
-          images: <Docker ID>/final-main
+          images: viral0249/final-main
 
       - name: Build and push Docker Image
         uses: docker/build-push-action@v5
