@@ -15,7 +15,7 @@ on:
 # Задания
 jobs:
   # Задание с идентификатором "build"
-  build:
+  build_and_test:
     # Для запуска задания используется раннер "ubuntu-latest", что соответствует последней версии Ubuntu
     runs-on: ubuntu-latest
 
